@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   cmd_pb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 15:52:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/23 16:38:49 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/23 15:47:41 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/23 15:51:17 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int main(int ac, char **av)
+void pb(t_check *o)
 {
-	int boucle = 1;
-	char buf[4096];
-	t_check o;
-	if (ac == 1)
-		return (0);
-	else if (ft_check_arg(ac, av, &o))
-		return(-1);
-	while (boucle)
+	int tmp;
+	int i;
+
+	i = 1;
+	if (o->t_st1 > 0)
 	{
-		read(0, buf, 4096);
-		if (ft_strncmp(buf, "pa", 2) == 0)
-			pa(&o);
-		if (ft_strncmp(buf, "pb", 2) == 0)
-			pb(&o);
-		if (ft_strncmp(buf, "stop", 4) == 0)
-			boucle = 0;
+		tmp = o->stack1[0];
+		while (i < o->t_st1)
+		{
+			o->stack1[i - 1] = o->stack1[i];
+			i++;
+		}
+		o->t_st1--;
+		i = o->t_st2;
+		while (i > 0)
+		{
+			o->stack2[i] = o->stack2[i - 1];
+			i--;
+		}
+		o->t_st2++;
+		o->stack2[i] = tmp;
 	}
+	ft_put_stack(o);
 }

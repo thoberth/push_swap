@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   cmd_ra.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 15:52:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/23 16:38:49 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/23 15:54:02 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/23 16:17:34 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int main(int ac, char **av)
+void	ra(t_check *o)
 {
-	int boucle = 1;
-	char buf[4096];
-	t_check o;
-	if (ac == 1)
-		return (0);
-	else if (ft_check_arg(ac, av, &o))
-		return(-1);
-	while (boucle)
+	int tmp;
+	int i;
+
+	i = 0;
+	if (o->t_st1 > 1)
 	{
-		read(0, buf, 4096);
-		if (ft_strncmp(buf, "pa", 2) == 0)
-			pa(&o);
-		if (ft_strncmp(buf, "pb", 2) == 0)
-			pb(&o);
-		if (ft_strncmp(buf, "stop", 4) == 0)
-			boucle = 0;
+		tmp = o->stack1[0];
+		while (i < o->t_st1)
+		{
+			o->stack1[i] = o->stack1[i + 1];
+			i++;
+		}
+		o->stack1[i - 1] = tmp;
 	}
+	ft_put_stack(o);
 }

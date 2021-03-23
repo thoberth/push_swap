@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 12:53:21 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/19 15:12:35 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/23 15:34:07 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	ft_init(t_check *o, int ac)
 {
 	if (!(o->stack1 = malloc(sizeof(int) * (ac - 1))))
 		exit(1);
+	if (!(o->stack2 = malloc(sizeof(int) * (ac - 1))))
+		exit(1);
 	o->t_st1 = ac - 1;
+	o->t_st2 = 0;
 }
 
 int		ft_check_doublon(t_check *o)
@@ -46,6 +49,8 @@ int		ft_check_arg2(char *s)
 
 	i = 0;
 	a = ft_strlen(s);
+	if (s[i] == '-')
+		i++;
 	while (s[i] >= '0' && s[i] <= '9')
 		i++;
 	if (i != a)
