@@ -6,13 +6,13 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 15:59:52 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/23 16:20:05 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/27 13:26:06 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	ss(t_check *o)
+void	ss(t_stack *o)
 {
 	sa(o);
 	sb(o);

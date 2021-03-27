@@ -6,13 +6,13 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 15:54:02 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/23 16:17:34 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/27 13:26:11 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	ra(t_check *o)
+void	ra(t_stack *o)
 {
 	int tmp;
 	int i;

@@ -6,13 +6,13 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 12:53:21 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/23 15:34:07 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/27 13:26:04 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	ft_init(t_check *o, int ac)
+void	ft_init(t_stack *o, int ac)
 {
 	if (!(o->stack1 = malloc(sizeof(int) * (ac - 1))))
 		exit(1);
@@ -22,7 +22,7 @@ void	ft_init(t_check *o, int ac)
 	o->t_st2 = 0;
 }
 
-int		ft_check_doublon(t_check *o)
+int		ft_check_doublon(t_stack *o)
 {
 	int i;
 	int a;
@@ -35,7 +35,7 @@ int		ft_check_doublon(t_check *o)
 		{
 			if (o->stack1[a] == o->stack1[i])
 				return (1);
-			a++;	
+			a++;
 		}
 		i++;
 	}
@@ -58,7 +58,7 @@ int		ft_check_arg2(char *s)
 	return (0);
 }
 
-int		ft_check_arg(int ac, char **av, t_check *o)
+int		ft_check_arg(int ac, char **av, t_stack *o)
 {
 	int i;
 	int t;

@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmd_rr.c                                           :+:      :+:    :+:   */
+/*   ft_check_issort.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/23 16:18:42 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:26:10 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/26 15:47:09 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/27 13:23:19 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	rr(t_stack *o)
+int		ft_check_issort(t_stack *o)
 {
-	ra(o);
-	rb(o);
-	ft_put_stack(o);
+	int i;
+
+	i = 1;
+	if (o->t_st2 != 0)
+		return (1);
+	while (i < o->t_st1)
+	{
+		if (o->stack1[i] < o->stack1[i - 1])
+			return (1);
+		i++;
+	}
+	return (0);
 }

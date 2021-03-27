@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 14:41:44 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/23 15:13:52 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/27 13:23:40 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,17 @@ int		ft_biggest_len(int *tab, int len_tab)
 	return (len);
 }
 
-void	ft_put_stack2(t_check *o, int i, int t)
+void	ft_put_stack2(t_stack *o, int i, int t)
 {
 	int a;
 
 	if (i < o->t_st1)
 	{
 		ft_putnbr_fd(o->stack1[i], 1);
-		a = t - ft_intlen(o->stack1[i]) + 1;
+		if (t <= 6)
+			a = 7 - ft_intlen(o->stack1[i]);
+		else
+			a = t - ft_intlen(o->stack1[i]) + 1;
 		while (a--)
 			ft_putchar_fd(' ', 1);
 	}
@@ -54,7 +57,7 @@ void	ft_put_stack2(t_check *o, int i, int t)
 	ft_putchar_fd('\n', 1);
 }
 
-void	ft_put_stack(t_check *o)
+void	ft_put_stack(t_stack *o)
 {
 	int i;
 	int t;
@@ -69,12 +72,12 @@ void	ft_put_stack(t_check *o)
 	{
 		a = t - 5;
 		while (a--)
-			ft_putchar_fd(' ', 1); 
+			ft_putchar_fd(' ', 1);
 	}
 	ft_putstr_fd("| stack2\n", 1);
 	while (i < o->t_st1 || i < o->t_st2)
 	{
-		ft_put_stack2(o, i, t);		
+		ft_put_stack2(o, i, t);
 		i++;
 	}
 }
