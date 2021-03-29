@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_issort.c                                  :+:      :+:    :+:   */
+/*   cmd_rrb.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/26 15:47:09 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:23:19 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/23 16:30:00 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/29 09:49:59 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
-int		ft_check_issort(t_stack *o)
+void	rrb(t_stack *o)
 {
+	int tmp;
 	int i;
 
-	i = 1;
-	if (o->t_st2 != 0)
-		return (1);
-	while (i < o->t_st1)
+	i = o->t_st2 - 1;
+	if (o->t_st2 > 1)
 	{
-		if (o->stack1[i] < o->stack1[i - 1])
-			return (1);
-		i++;
+		tmp = o->stack2[i];
+		while (i > 0)
+		{
+			o->stack2[i] = o->stack2[i - 1];
+			i--;
+		}
+		o->stack2[0] = tmp;
 	}
-	return (0);
+	ft_put_stack(o);
 }

@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmd_ss.c                                           :+:      :+:    :+:   */
+/*   cmd_sb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/23 15:59:52 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:26:06 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/23 15:59:18 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/29 09:50:16 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
-void	ss(t_stack *o)
+void	sb(t_stack *o)
 {
-	sa(o);
-	sb(o);
+	int tmp;
+
+	if (o->t_st2 > 2)
+	{
+		tmp = o->stack2[0];
+		o->stack2[0] = o->stack2[1];
+		o->stack2[1] = tmp;
+	}
 	ft_put_stack(o);
 }

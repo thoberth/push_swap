@@ -6,11 +6,11 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 14:41:44 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:23:40 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/29 09:50:59 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
 int		ft_biggest_len(int *tab, int len_tab)
 {

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_stack.c                                    :+:      :+:    :+:   */
+/*   ft_check_issort.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/24 20:10:38 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:23:37 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/26 15:47:09 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/29 09:50:40 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
-void	ft_free_stack(t_stack *o)
+int		ft_check_issort(t_stack *o)
 {
-	int		i;
+	int i;
 
-	i = 0;
-	while (o->tab_cmd[i] != NULL)
+	i = 1;
+	if (o->t_st2 != 0)
+		return (1);
+	while (i < o->t_st1)
 	{
-		free(o->tab_cmd[i]);
+		if (o->stack1[i] < o->stack1[i - 1])
+			return (1);
 		i++;
 	}
-	free(o->tab_cmd);
-	free(o->stack1);
-	free(o->stack2);
-	o->t_st1 = 0;
-	o->t_st2 = 0;
+	return (0);
 }

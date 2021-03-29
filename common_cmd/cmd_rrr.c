@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmd_sa.c                                           :+:      :+:    :+:   */
+/*   cmd_rrr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/23 15:54:22 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:26:08 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/23 16:30:37 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/29 09:50:06 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
-void	sa(t_stack *o)
+void	rrr(t_stack *o)
 {
-	int tmp;
-
-	if (o->t_st1 > 2)
-	{
-		tmp = o->stack1[0];
-		o->stack1[0] = o->stack1[1];
-		o->stack1[1] = tmp;
-	}
+	rra(o);
+	rrb(o);
 	ft_put_stack(o);
 }

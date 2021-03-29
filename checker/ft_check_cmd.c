@@ -6,11 +6,11 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 15:08:15 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/26 15:23:03 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/29 09:50:35 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
 int		ft_isknow(char *s)
 {

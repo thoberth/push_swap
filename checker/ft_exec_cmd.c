@@ -6,11 +6,11 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 15:34:16 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/27 13:24:41 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/29 09:50:44 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
 void	ft_exec_cmd2(char *s, t_stack *o)
 {
