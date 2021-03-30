@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 09:47:49 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 19:12:50 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/30 21:09:59 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void			ft_exec_cmd(t_stack *o);
 //	CMD PUSH_SWAP
 */
 void			ft_algo(t_stack *o);
+int				ft_isclockwise(t_stack *o);
+void			ft_sort_clockwise(t_stack *o);
 
 /*
 //	COMMON CMD

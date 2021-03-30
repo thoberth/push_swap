@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 14:41:44 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/29 09:50:59 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/30 21:51:46 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ void	ft_put_stack2(t_stack *o, int i, int t)
 	}
 	else
 	{
-		a = t + 1;
+		if (t <= 6)
+			a = 7;
+		else
+			a = t + 1;
 		while (a--)
 			ft_putchar_fd(' ', 1);
 	}
@@ -80,4 +83,5 @@ void	ft_put_stack(t_stack *o)
 		ft_put_stack2(o, i, t);
 		i++;
 	}
+	ft_putchar_fd('\n', 1);
 }

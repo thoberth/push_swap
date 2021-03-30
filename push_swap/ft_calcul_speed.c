@@ -1,26 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_calcul_speed.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 16:15:31 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 21:12:03 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/30 22:03:34 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/30 22:33:44 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int		main(int ac, char **av)
+/*
+**	Fonction qui retourne 1 pour ra, 0 pour rra
+*/
+
+int		ft_top(int *tab, int t_tab, int nbr)
 {
-	t_stack o;
-	if (ft_check_arg(ac, av, &o))
-	{
-		ft_putstr_fd("Error\n", 2);
+	int		i;
+	int		to_top;
+	int		to_calc;
+
+	i = 0;
+	to_calc = t_tab / 2;
+	while (tab[i++] != nbr)
+		to_top++;
+	if (to_top < to_calc)
 		return (1);
-	}
-	if (ac >= 3 && ft_check_issort(o.stack1, o.t_st1))
-		ft_algo(&o);
 	return (0);
 }
+
+int		ft_calcul_speed(t_stack *o, int i)
+{
+	int		nb_op;
+
+	nb_op = 0;
+
+	return (nb_op);
+}
+
+int main ()
+{
+	int tab[7] = {0, 12, 14, 2, 5, 9, 45};
+	int t_tab = 7;
+
+	printf("|%d|\n", ft_top(tab, t_tab, 2));
+}
+
+//1 = ra
+//0 = rra
