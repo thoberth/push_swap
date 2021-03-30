@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 15:08:15 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/29 09:50:35 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/30 18:24:49 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ int		ft_isknow(char *s)
 		return (0);
 	else if (ft_strncmp(s, "rrr", ft_strlen(s)) == 0)
 		return (0);
-	else
-		return (1);
+	return (1);
 }
 
 int		ft_check_cmd(char **tab_s)

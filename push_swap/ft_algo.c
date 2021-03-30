@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_issort.c                                  :+:      :+:    :+:   */
+/*   ft_algo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/26 15:47:09 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 19:07:30 by thoberth         ###   ########.fr       */
+/*   Created: 2021/03/30 18:57:27 by thoberth          #+#    #+#             */
+/*   Updated: 2021/03/30 19:14:37 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int		ft_check_issort(int *tab, int t_tab)
+void	ft_algo(t_stack *o)
 {
-	int i;
-
-	i = 1;
-	while (i < t_tab)
+	if (o->t_st1 == 2)
 	{
-		if (tab[i] < tab[i - 1])
-			return (1);
-		i++;
+		sa(o);
+		ft_putstr_fd("sa\n", 1);
 	}
-	return (0);
 }

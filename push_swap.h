@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 09:47:49 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/29 09:56:50 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/30 19:12:50 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,16 @@ void			ft_put_stack(t_stack *o);
 void			ft_free_stack(t_stack *o);
 int				ft_check_cmd(char **tab_s);
 void			ft_exec_cmd(t_stack *o);
-int				ft_check_issort(t_stack *o);
+
+/*
+//	CMD PUSH_SWAP
+*/
+void			ft_algo(t_stack *o);
 
 /*
 //	COMMON CMD
 */
+int				ft_check_issort(int *tab, int t_tab);
 void			pa(t_stack *o);
 void			pb(t_stack *o);
 void			sa(t_stack *o);

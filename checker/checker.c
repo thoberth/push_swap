@@ -6,15 +6,28 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 15:52:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/29 16:43:35 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/03/30 18:31:33 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 /*
-//	Mettre a la norme et ajouter un msg d'erreur lorsque 0 cmd en entree standard
+**	Mettre a la norme et ajouter un msg d'erreur
+**	lorsque 0 cmd en entree standard
 */
+
+int		ft_main2(t_stack *o)
+{
+	if (ft_check_cmd(o->tab_cmd))
+	{
+		ft_putstr_fd("Error\n", 2);
+		return (1);
+	}
+	ft_exec_cmd(o);
+	ft_free_stack(o);
+	return (0);
+}
 
 int		main(int ac, char **av)
 {
@@ -40,11 +53,5 @@ int		main(int ac, char **av)
 	}
 	o.tab_cmd = ft_split(s, '\n');
 	free(s);
-	if (ft_check_cmd(o.tab_cmd))
-	{
-		ft_putstr_fd("Error\n", 2);
-		return (1);
-	}
-	ft_exec_cmd(&o);
-	ft_free_stack(&o);
+	return (ft_main2(&o));
 }
