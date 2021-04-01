@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 15:27:50 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/29 09:49:21 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:08:32 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	pa(t_stack *o)
 		o->t_st1++;
 		o->stack1[i] = tmp;
 	}
+	ft_putstr_fd("pa\n", 1);
 	ft_put_stack(o);
 }

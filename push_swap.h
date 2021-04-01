@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 09:47:49 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 21:09:59 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:03:07 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ void			ft_exec_cmd(t_stack *o);
 void			ft_algo(t_stack *o);
 int				ft_isclockwise(t_stack *o);
 void			ft_sort_clockwise(t_stack *o);
+int				ft_calcul_speed(t_stack *o, int i);
+int				ft_top(int *tab, int t_tab, int nbr);
+int				ft_find_nbr(t_stack *o, int i);
+int				ft_nb_op(int *tab, int t_tab, int nbr, int ra_rra);
 
 /*
 //	COMMON CMD
