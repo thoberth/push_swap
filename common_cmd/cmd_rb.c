@@ -6,13 +6,13 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 16:18:01 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/01 16:09:10 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/02 15:09:47 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rb(t_stack *o)
+void	rb(t_stack *o, int t)
 {
 	int tmp;
 	int i;
@@ -28,6 +28,9 @@ void	rb(t_stack *o)
 		}
 		o->stack2[i - 1] = tmp;
 	}
-	ft_putstr_fd("rb\n", 1);
-	ft_put_stack(o);
+	if (t == 1)
+	{
+		ft_putstr_fd("rb\n", 1);
+		//ft_put_stack(o);
+	}
 }

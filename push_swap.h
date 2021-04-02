@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 09:47:49 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/01 16:03:07 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:26:41 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int				ft_calcul_speed(t_stack *o, int i);
 int				ft_top(int *tab, int t_tab, int nbr);
 int				ft_find_nbr(t_stack *o, int i);
 int				ft_nb_op(int *tab, int t_tab, int nbr, int ra_rra);
+int				ft_find_smaller(int *tab, int t_tab);
+void			ft_sort_stack(t_stack *o);
 
 /*
 //	COMMON CMD
@@ -56,14 +58,14 @@ int				ft_nb_op(int *tab, int t_tab, int nbr, int ra_rra);
 int				ft_check_issort(int *tab, int t_tab);
 void			pa(t_stack *o);
 void			pb(t_stack *o);
-void			sa(t_stack *o);
-void			sb(t_stack *o);
+void			sa(t_stack *o, int i);
+void			sb(t_stack *o, int i);
 void			ss(t_stack *o);
-void			ra(t_stack *o);
-void			rb(t_stack *o);
+void			ra(t_stack *o, int i);
+void			rb(t_stack *o, int i);
 void			rr(t_stack *o);
-void			rra(t_stack *o);
-void			rrb(t_stack *o);
+void			rra(t_stack *o, int i);
+void			rrb(t_stack *o, int i);
 void			rrr(t_stack *o);
 
 #endif
