@@ -6,44 +6,24 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/30 18:57:27 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/02 15:19:22 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:38:24 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_move_b(t_stack *o, int op_st2, int nb_op2)
-{
-	while (nb_op2 > 0)
-	{
-		if (op_st2 == 0)
-			rrb(o, 1);
-		else
-			rb(o, 1);
-		nb_op2--;
-	}
-}
-
-void	ft_move_a(t_stack *o, int op_st1, int nb_op1)
-{
-	while (nb_op1 > 0)
-	{
-		if (op_st1 == 0)
-			rra(o, 1);
-		else
-			ra(o, 1);
-		nb_op1--;
-	}
-}
+/*
+** Cas ou on doit utiliser rr ou rrr
+*/
 
 void	ft_move_both(t_stack *o, int op_st1, int *nb_op1, int *nb_op2)
 {
 	while (*nb_op1 > 0 && *nb_op2 > 0)
 	{
 		if (op_st1 == 0)
-			rrr(o);
+			rrr(o, 1);
 		else
-			rr(o);
+			rr(o, 1);
 		(*nb_op1)--;
 		(*nb_op2)--;
 	}
@@ -104,16 +84,15 @@ void	ft_prepare_pusha(t_stack *o)
 void	ft_algo2(t_stack *o)
 {
 	while (o->t_st1 > 3)
-		pb(o);
+		pb(o, 1);
 	if (!ft_isclockwise(o))
 		ft_sort_clockwise(o);
 	while (o->t_st2 > 0)
 	{
 		ft_prepare_pusha(o);
-		pa(o);
+		pa(o, 1);
 	}
 	ft_sort_stack(o);
-	ft_put_stack(o);
 }
 
 /*

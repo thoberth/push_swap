@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/30 22:03:34 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/02 11:45:34 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:23:39 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,9 +136,9 @@ int		ft_calcul_speed(t_stack *o, int i)
 	if (op_st1 == op_st2)
 	{
 		if (nb_op1 > nb_op2)
-			return (nb_op1 - nb_op2);
-		if (nb_op2 < nb_op1)
-			return (nb_op2 - nb_op1);
+			return (nb_op1);
+		if (nb_op2 > nb_op1)
+			return (nb_op2);
 		if (nb_op1 == nb_op2)
 			return (nb_op1);
 	}

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/30 20:29:58 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/02 12:31:17 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:36:29 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*
 **	Fonction met stack1 dnas le sens horlogique
 */
+
 void	ft_sort_clockwise(t_stack *o)
 {
 	if ((o->stack1[0] > o->stack1[1] && o->stack1[1] < o->stack1[2]) ||
@@ -26,6 +27,7 @@ void	ft_sort_clockwise(t_stack *o)
 /*
 **	Fonction qui verifie si stack1 est dans le sens horlogique
 */
+
 int		ft_isclockwise(t_stack *o)
 {
 	if ((o->stack1[0] < o->stack1[1] && o->stack1[1] < o->stack1[2]) ||

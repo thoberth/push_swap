@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 15:08:15 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 18:24:49 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:28:56 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ int		ft_isknow(char *s)
 		return (0);
 	return (1);
 }
+
+/*
+**	Test si chaque cmd est connue sinon renvoie 1
+*/
 
 int		ft_check_cmd(char **tab_s)
 {

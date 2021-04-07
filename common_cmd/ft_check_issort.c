@@ -6,11 +6,15 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 15:47:09 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 21:53:35 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:32:35 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+/*
+**	Verifie si le tableau d'entier est trié
+*/
 
 int		ft_check_issort(int *tab, int t_tab)
 {

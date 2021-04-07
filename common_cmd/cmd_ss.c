@@ -6,16 +6,16 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 15:59:52 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/02 15:09:40 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:31:10 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ss(t_stack *o)
+void	ss(t_stack *o, int to_print)
 {
-	ft_putstr_fd("ss\n", 1);
+	if (to_print == 1)
+		ft_putstr_fd("ss\n", 1);
 	sa(o, 0);
 	sb(o, 0);
-	//ft_put_stack(o);
 }

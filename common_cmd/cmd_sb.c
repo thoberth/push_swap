@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 15:59:18 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/02 15:09:42 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:31:19 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,5 @@ void	sb(t_stack *o, int i)
 		o->stack2[1] = tmp;
 	}
 	if (i == 1)
-	{
 		ft_putstr_fd("sb\n", 1);
-		//ft_put_stack(o);
-	}
 }

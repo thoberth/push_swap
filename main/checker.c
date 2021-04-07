@@ -6,15 +6,14 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 15:52:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/03/30 18:31:33 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/06 14:42:10 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 /*
-**	Mettre a la norme et ajouter un msg d'erreur
-**	lorsque 0 cmd en entree standard
+** Main de checker
 */
 
 int		ft_main2(t_stack *o)

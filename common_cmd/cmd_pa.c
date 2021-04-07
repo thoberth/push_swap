@@ -6,13 +6,13 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 15:27:50 by thoberth          #+#    #+#             */
-/*   Updated: 2021/04/02 15:08:56 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/04/07 14:30:48 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	pa(t_stack *o)
+void	pa(t_stack *o, int to_print)
 {
 	int tmp;
 	int i;
@@ -36,6 +36,6 @@ void	pa(t_stack *o)
 		o->t_st1++;
 		o->stack1[i] = tmp;
 	}
-	ft_putstr_fd("pa\n", 1);
-	//ft_put_stack(o);
+	if (to_print == 1)
+		ft_putstr_fd("pa\n", 1);
 }
