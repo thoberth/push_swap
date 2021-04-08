@@ -35,4 +35,4 @@ if [ $1 ]; then
 fi
 
 echo $ARG > rand_nbrs.log
-./push_swap $ARG 
+./push_swap $ARG | ./checker

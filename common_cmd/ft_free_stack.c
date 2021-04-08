@@ -17,12 +17,15 @@ void	ft_free_stack(t_stack *o)
 	int		i;
 
 	i = 0;
-	while (o->tab_cmd[i] != NULL)
+	if (o->tab_cmd != NULL)
 	{
-		free(o->tab_cmd[i]);
-		i++;
+		while (o->tab_cmd[i] != NULL)
+			{
+			free(o->tab_cmd[i]);
+			i++;
+		}
+		free(o->tab_cmd);
 	}
-	free(o->tab_cmd);
 	free(o->stack1);
 	free(o->stack2);
 	o->t_st1 = 0;

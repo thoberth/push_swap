@@ -28,7 +28,7 @@ MAIN_PUSH_SWAP = main/push_swap.c
 
 LIBFTPATH = Libft
 
-NAME_LIBFT = Libft.a
+NAME_LIBFT = libft.a
 
 CC = gcc
 
@@ -49,10 +49,10 @@ ARRC = ar rcs ${NAME}
 all : ${EXEC_CHECKER} ${EXEC_PUSH_SWAP}
 
 ${EXEC_CHECKER} : ${NAME} ${NAME_LIBFT}
-	${CC} -o $@ $^ ${MAIN_CHECKER}
+	${CC} -o $@ ${MAIN_CHECKER} $^
 
 ${EXEC_PUSH_SWAP} : ${NAME} ${NAME_LIBFT}
-	${CC} -o $@ $^ ${MAIN_PUSH_SWAP}
+	${CC} -o $@ ${MAIN_PUSH_SWAP} $^
 
 ${NAME} : ${OBJS_CHECKER} ${OBJS_COMMON} ${OBJS_PUSH_SWAP}
 	${ARRC} $^
@@ -61,7 +61,7 @@ ${NAME_LIBFT} :
 	cd ${LIBFTPATH} ; make ; cp ${NAME_LIBFT} ../ ; cd ..
 
 %.o : %.c
-	${CC} ${CFLAGS} -c $^ -o $@ -I ${HDR}
+	${CC} ${CFLAGS} -c $^ -o $@
 
 clean :
 	${RM} ${OBJS_CHECKER} ${OBJS_COMMON} ${OBJS_PUSH_SWAP} ; cd ${LIBFTPATH} ; make fclean ; cd ../

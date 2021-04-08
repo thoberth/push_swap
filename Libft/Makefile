@@ -86,7 +86,7 @@ ${NAME}: ${OBJS}
 all: ${NAME}
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${HDR}
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 bonus: ${OBJSB}
 	${ARRC} ${OBJSB}

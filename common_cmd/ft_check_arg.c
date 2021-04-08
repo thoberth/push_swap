@@ -14,6 +14,7 @@
 
 void	ft_init(t_stack *o, int ac)
 {
+	o->tab_cmd = NULL;
 	if (!(o->stack1 = malloc(sizeof(int) * (ac - 1))))
 		exit(1);
 	if (!(o->stack2 = malloc(sizeof(int) * (ac - 1))))
@@ -61,10 +62,8 @@ int		ft_check_arg2(char *s)
 int		ft_check_arg(int ac, char **av, t_stack *o)
 {
 	int i;
-	int t;
 
 	i = 1;
-	t = 0;
 	ft_init(o, ac);
 	while (i < ac)
 	{

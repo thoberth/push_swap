@@ -49,6 +49,8 @@ int				ft_find_nbr(t_stack *o, int i);
 int				ft_nb_op(int *tab, int t_tab, int nbr, int ra_rra);
 int				ft_find_smaller(int *tab, int t_tab);
 void			ft_sort_stack(t_stack *o);
+void			ft_move_a(t_stack *o, int op_st1, int nb_op1);
+void			ft_move_b(t_stack *o, int op_st2, int nb_op2);
 
 /*
 **	COMMON CMD

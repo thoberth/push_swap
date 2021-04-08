@@ -23,5 +23,6 @@ int		main(int ac, char **av)
 	}
 	if (ac >= 3 && ft_check_issort(o.stack1, o.t_st1))
 		ft_algo(&o);
+	ft_free_stack(&o);
 	return (0);
 }
