@@ -19,6 +19,7 @@ int		main(int ac, char **av)
 	if (ft_check_arg(ac, av, &o))
 	{
 		ft_putstr_fd("Error\n", 2);
+		ft_free_stack(&o);
 		return (1);
 	}
 	if (ac >= 3 && ft_check_issort(o.stack1, o.t_st1))

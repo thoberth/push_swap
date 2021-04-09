@@ -37,7 +37,7 @@ int		main(int ac, char **av)
 
 	if (ac == 1)
 		return (0);
-	else if (ft_check_arg(ac, av, &o))
+	if (ft_check_arg(ac, av, &o))
 	{
 		ft_putstr_fd("Error\n", 2);
 		return (1);
