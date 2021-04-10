@@ -20,7 +20,7 @@ void	ft_free_stack(t_stack *o)
 	if (o->tab_cmd != NULL)
 	{
 		while (o->tab_cmd[i] != NULL)
-			{
+		{
 			free(o->tab_cmd[i]);
 			i++;
 		}

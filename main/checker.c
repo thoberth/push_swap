@@ -21,6 +21,7 @@ int		ft_main2(t_stack *o)
 	if (ft_check_cmd(o->tab_cmd))
 	{
 		ft_putstr_fd("Error\n", 2);
+		ft_free_stack(o);
 		return (1);
 	}
 	ft_exec_cmd(o);
@@ -40,6 +41,7 @@ int		main(int ac, char **av)
 	if (ft_check_arg(ac, av, &o))
 	{
 		ft_putstr_fd("Error\n", 2);
+		ft_free_stack(&o);
 		return (1);
 	}
 	if (!(s = malloc(sizeof(char) * 1)))

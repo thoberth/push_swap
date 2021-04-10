@@ -67,7 +67,8 @@ int		ft_check_arg(int ac, char **av, t_stack *o)
 	ft_init(o, ac);
 	while (i < ac)
 	{
-		if (ft_check_arg2(av[i]))
+		if (ft_check_arg2(av[i]) || !(ft_atoi(av[i]) >= -2147483648 &&
+			ft_atoi(av[i]) <= 2147483647))
 			return (1);
 		else
 			o->stack1[i - 1] = ft_atoi(av[i]);
